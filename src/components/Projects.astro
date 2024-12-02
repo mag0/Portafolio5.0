@@ -2,10 +2,28 @@
 import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import SqlServer from "./icons/SqlServer.astro";
+import React from "./icons/React.astro";
+import Php from "./icons/Php.astro";
+import Spring from "./icons/Spring.astro";
+import Angular from "./icons/Angular.astro";
+import Java from "./icons/Java.astro";
+import Nodejs from "./icons/NodeJS.astro";
+import Express from "./icons/Express.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
+  EXPRESS: {
+    name: "Express",
+    class: "bg-black text-white",
+    icon: Express,
+  },
+  NODEJS: {
+    name: "Nodejs",
+    class: "bg-black text-white",
+    icon: Nodejs,
+  },
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
@@ -16,81 +34,134 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  REACT: {
+    name: "React",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
+  SQLSERVER: {
+    name: "SqlServer",
+    class: "bg-[#003159] text-white",
+    icon: SqlServer,
+  },
+  PHP: {
+    name: "Php",
+    class: "bg-[#003159] text-white",
+    icon: Php,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#003159] text-white",
+    icon: Java,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-[#003159] text-white",
+    icon: Spring,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#003159] text-white",
+    icon: Angular,
+  },
 };
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Pagina web - Pasteleria",
+    modalidad: "Individual",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Desarrollé una página web de pastelería usando React. El sitio incluye un catálogo de productos, filtrado de productos y diseño responsive. 🧁",
+    link: "https://beluguerreiropasteleria.netlify.app/",
+    github: "https://github.com/mag0/Belicias2.0",
+    image: "/img/belicias.png",
+    tags: [TAGS.REACT],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Preguntados",
+    modalidad: "Grupal",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Desarrollé una aplicación web tipo Preguntados utilizando PHP y SQL. Los usuarios pueden iniciar partidas, responder preguntas y guardar su puntaje. La aplicación permite recomendar preguntas, que son revisadas por un usuario con rol de editor. Además, un usuario con rol de administrador puede visualizar todas las estadísticas de los jugadores en gráficos temporales.",
+    github: "https://github.com/mag0/ProyectoFinalWeb2",
+    image: "/img/preguntados.jpg",
+    tags: [TAGS.PHP, TAGS.SQLSERVER],
+  },
+  {
+    title: "Gestion de flota vehicular",
+    modalidad: "Grupal",
+    description:
+      "Desarrollé una aplicación web de gestión de flotas utilizando Spring y SQL Server. Cada usuario puede gestionar su propia flota de vehículos, tomar pedidos y asignarlos a los vehículos a través de la web. La aplicación también incluye un mapa en tiempo real que muestra los viajes de los vehículos.",
+    github: "https://github.com/mag0/ProyectoTallerWeb",
+    image: "/img/gestionVehicular.jpg",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.SQLSERVER],
+  },
+  {
+    title: "Aplicacion de lista de tareas",
+    modalidad: "Grupal",
+    description:
+      "Desarrollé una aplicación web de gestión de tareas utilizando Angular para el frontend y una API RESTful creada con Node.jsy Express en el backend. La aplicación permite a los usuarios crear, leer, actualizar y eliminar tareas, las cuales se almacenan en memoria en el backend. Los usuarios pueden gestionar sus listas de tareas de manera intuitiva y eficiente a través de una interfaz web interactiva.",
+    github: "https://github.com/mag0/TPTallerWeb2",
+    image: "/img/webTareas.jpg",
+    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.EXPRESS],
   },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
-              src={image}
-            />
-          </div>
-        </div>
-
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                  >
-                    <tag.icon class="size-4" />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              {description}
+    PROJECTS.map(
+      ({ image, title, modalidad, description, tags, link, github }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          <div class="w-full md:w-1/2">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800">
+              <img
+                alt="Recién llegado vs 5 años en Nueva Zelanda"
+                class="object-cover object-center w-full h-full"
+                loading="lazy"
+                src={image}
+              />
             </div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                  Code
-                </LinkButton>
-              )}
-              {link && (
-                <LinkButton href={link}>
-                  <Link class="size-4" />
-                  Preview
-                </LinkButton>
-              )}
-            </footer>
           </div>
-        </div>
-      </article>
-    ))
+
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <h4 style="color: rgb(246, 113, 113);">Desarrollo {modalidad}</h4>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                {description}
+              </div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      )
+    )
   }
 </div>
