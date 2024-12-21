@@ -10,23 +10,31 @@ import Angular from "./icons/Angular.astro";
 import Java from "./icons/Java.astro";
 import Nodejs from "./icons/NodeJS.astro";
 import Express from "./icons/Express.astro";
+import Astro1 from "./icons/Astro5.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 
+// iconos = https://svgl.app/?search=spring
+
 const TAGS = {
+  ASTRO1: {
+    name: "Astro1",
+    class: "bg-[#003159] text-white",
+    icon: Astro1,
+  },
   EXPRESS: {
     name: "Express",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: Express,
   },
   NODEJS: {
     name: "Nodejs",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: Nodejs,
   },
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: NextJS,
   },
   TAILWIND: {
@@ -70,7 +78,7 @@ const PROJECTS = [
     title: "Pagina web - Pasteleria",
     modalidad: "Individual",
     description:
-      "Desarrollé una página web de pastelería usando React. El sitio incluye un catálogo de productos, filtrado de productos y diseño responsive. 🧁",
+      "Desarrollé una página web de pastelería usando React. El sitio incluye un catálogo de productos, filtrado de productos y diseño responsive.",
     link: "https://beluguerreiropasteleria.netlify.app/",
     github: "https://github.com/mag0/Belicias2.0",
     image: "/img/belicias.png",
@@ -102,6 +110,16 @@ const PROJECTS = [
     github: "https://github.com/mag0/TPTallerWeb2",
     image: "/img/webTareas.jpg",
     tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.EXPRESS],
+  },
+  {
+    title: "Lista de Personajes Pokémon",
+    modalidad: "Individual",
+    description:
+      "Desarrollé una aplicación de personajes utilizando Astro para el frontend y la API de Pokémon para obtener la información de los personajes. La aplicación muestra una lista detallada de personajes, con sus nombres, imágenes y descripciones. Obtuve los datos dinámicamente desde la API de Pokémon, garantizando información actualizada y precisa. Esta aplicación proporciona una experiencia de usuario fluida y atractiva, combinando tecnologías modernas para lograr una interfaz intuitiva y visualmente agradable.",
+    link: "https://pokemon-web-sable.vercel.app/",
+    github: "https://github.com/mag0/PokemonWeb",
+    image: "/img/pokemonWeb.png",
+    tags: [TAGS.ASTRO1],
   },
 ];
 ---
