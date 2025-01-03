@@ -10,17 +10,29 @@ import Angular from "./icons/Angular.astro";
 import Java from "./icons/Java.astro";
 import Nodejs from "./icons/NodeJS.astro";
 import Express from "./icons/Express.astro";
-import Astro1 from "./icons/Astro5.astro";
+import AstroDev from "./icons/Astro5.astro";
+import Flowbite from "./icons/Flowbite.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 
 // iconos = https://svgl.app/?search=spring
 
 const TAGS = {
-  ASTRO1: {
-    name: "Astro1",
+  BOOTSTRAP: {
+    name: "Bootstrap",
     class: "bg-[#003159] text-white",
-    icon: Astro1,
+    icon: Bootstrap,
+  },
+  FLOWBITE: {
+    name: "Flowbite",
+    class: "bg-[#003159] text-white",
+    icon: Flowbite,
+  },
+  ASTRODEV: {
+    name: "AstroDev",
+    class: "bg-[#003159] text-white",
+    icon: AstroDev,
   },
   EXPRESS: {
     name: "Express",
@@ -78,11 +90,21 @@ const PROJECTS = [
     title: "Pagina web - Pasteleria",
     modalidad: "Individual",
     description:
-      "Desarrollé una página web de pastelería usando React. El sitio incluye un catálogo de productos, filtrado de productos y diseño responsive.",
+      "Desarrollé una página web personalizada para una pastelería utilizando React y Flowbite. La plataforma incluye un catálogo de productos atractivo y funcional, donde los usuarios pueden explorar una amplia variedad de productos de pastelería con imágenes de alta calidad y descripciones detalladas. Además, la página está optimizada para ser completamente responsive, garantizando una experiencia de usuario fluida y agradable en dispositivos móviles, tabletas y computadoras de escritorio.",
     link: "https://beluguerreiropasteleria.netlify.app/",
     github: "https://github.com/mag0/Belicias2.0",
     image: "/img/belicias.png",
-    tags: [TAGS.REACT],
+    tags: [TAGS.REACT, TAGS.FLOWBITE],
+  },
+  {
+    title: "MovieMania",
+    modalidad: "Individual",
+    description:
+      "Desarrollé una aplicación de películas utilizando React para el frontend y la API de TMDB para obtener la información de las películas. La aplicación muestra una lista detallada de películas, con sus títulos, imágenes y descripciones. Utilicé Tailwind y Flowbite para diseñar una interfaz de usuario moderna y visualmente atractiva. Los datos se obtuvieron dinámicamente desde la API de TMDB, garantizando información actualizada y precisa. Esta aplicación proporciona una experiencia de usuario fluida y atractiva, combinando tecnologías modernas para lograr una interfaz intuitiva y visualmente agradable.",
+    link: "https://movie-mania-navy.vercel.app/",
+    github: "https://github.com/mag0/MovieMania",
+    image: "/img/moviemania.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.FLOWBITE],
   },
   {
     title: "Preguntados",
@@ -91,7 +113,7 @@ const PROJECTS = [
       "Desarrollé una aplicación web tipo Preguntados utilizando PHP y SQL. Los usuarios pueden iniciar partidas, responder preguntas y guardar su puntaje. La aplicación permite recomendar preguntas, que son revisadas por un usuario con rol de editor. Además, un usuario con rol de administrador puede visualizar todas las estadísticas de los jugadores en gráficos temporales.",
     github: "https://github.com/mag0/ProyectoFinalWeb2",
     image: "/img/preguntados.jpg",
-    tags: [TAGS.PHP, TAGS.SQLSERVER],
+    tags: [TAGS.PHP, TAGS.SQLSERVER, TAGS.BOOTSTRAP],
   },
   {
     title: "Gestion de flota vehicular",
@@ -100,7 +122,7 @@ const PROJECTS = [
       "Desarrollé una aplicación web de gestión de flotas utilizando Spring y SQL Server. Cada usuario puede gestionar su propia flota de vehículos, tomar pedidos y asignarlos a los vehículos a través de la web. La aplicación también incluye un mapa en tiempo real que muestra los viajes de los vehículos.",
     github: "https://github.com/mag0/ProyectoTallerWeb",
     image: "/img/gestionVehicular.jpg",
-    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.SQLSERVER],
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.SQLSERVER, TAGS.BOOTSTRAP],
   },
   {
     title: "Aplicacion de lista de tareas",
@@ -109,7 +131,7 @@ const PROJECTS = [
       "Desarrollé una aplicación web de gestión de tareas utilizando Angular para el frontend y una API RESTful creada con Node.jsy Express en el backend. La aplicación permite a los usuarios crear, leer, actualizar y eliminar tareas, las cuales se almacenan en memoria en el backend. Los usuarios pueden gestionar sus listas de tareas de manera intuitiva y eficiente a través de una interfaz web interactiva.",
     github: "https://github.com/mag0/TPTallerWeb2",
     image: "/img/webTareas.jpg",
-    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.EXPRESS],
+    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.EXPRESS, TAGS.FLOWBITE],
   },
   {
     title: "Lista de Personajes de DragonBall",
@@ -119,7 +141,7 @@ const PROJECTS = [
     link: "https://dragonball-api-web.vercel.app/",
     github: "https://github.com/mag0/PokemonWeb",
     image: "/img/pokemonWeb.png",
-    tags: [TAGS.ASTRO1],
+    tags: [TAGS.ASTRODEV, TAGS.FLOWBITE],
   },
 ];
 ---
