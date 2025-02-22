@@ -13,12 +13,54 @@ import Express from "./icons/Express.astro";
 import AstroDev from "./icons/Astro5.astro";
 import Flowbite from "./icons/Flowbite.astro";
 import Bootstrap from "./icons/Bootstrap.astro";
+import Django from "./icons/Django.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Docker from "./icons/Docker.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import Kubernetes from "./icons/Kubernetes.astro";
+import Csharp from "./icons/Csharp.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 
 // iconos = https://svgl.app/?search=spring
 
 const TAGS = {
+  CSHARP: {
+    name: "C#",
+    class: "bg-[#003159] text-white",
+    icon: Csharp,
+  },
+  KUBERNETES: {
+    name: "Kubernetes",
+    class: "bg-[#003159] text-white",
+    icon: Kubernetes,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#003159] text-white",
+    icon: MongoDB,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: TypeScript,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#003159] text-white",
+    icon: Docker,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#003159] text-white",
+    icon: JavaScript,
+  },
+  DJANGO: {
+    name: "Django",
+    class: "bg-[#003159] text-white",
+    icon: Django,
+  },
   BOOTSTRAP: {
     name: "Bootstrap",
     class: "bg-[#003159] text-white",
@@ -90,21 +132,21 @@ const PROJECTS = [
     title: "Pagina web - Pasteleria",
     modalidad: "Individual",
     description:
-      "Desarrollé una página web personalizada para una pastelería utilizando React y Flowbite. La plataforma incluye un catálogo de productos atractivo y funcional, donde los usuarios pueden explorar una amplia variedad de productos de pastelería con imágenes de alta calidad y descripciones detalladas. Además, la página está optimizada para ser completamente responsive, garantizando una experiencia de usuario fluida y agradable en dispositivos móviles, tabletas y computadoras de escritorio.",
+      "Desarrollé una página web personalizada para una pastelería utilizando React y Flowbite. La plataforma incluye un catálogo de productos atractivo y funcional, donde los usuarios pueden explorar una amplia variedad de productos de pastelería con imágenes de alta calidad y descripciones detalladas. Además, la página está optimizada para ser completamente responsive.",
     link: "https://beluguerreiropasteleria.vercel.app/",
     github: "https://github.com/mag0/Belicias2.0",
     image: "/img/belicias.png",
-    tags: [TAGS.REACT, TAGS.FLOWBITE],
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.FLOWBITE, TAGS.JAVASCRIPT],
   },
   {
     title: "MovieMania",
     modalidad: "Individual",
     description:
-      "Desarrollé una aplicación de películas utilizando React para el frontend y la API de TMDB para obtener la información de las películas. La aplicación muestra una lista detallada de películas, con sus títulos, imágenes y descripciones. Utilicé Tailwind y Flowbite para diseñar una interfaz de usuario moderna y visualmente atractiva. Los datos se obtuvieron dinámicamente desde la API de TMDB, garantizando información actualizada y precisa. Esta aplicación proporciona una experiencia de usuario fluida y atractiva, combinando tecnologías modernas para lograr una interfaz intuitiva y visualmente agradable.",
+      "Desarrollé una aplicación de películas utilizando React para el frontend y la API de TMDB para obtener la información de las películas. La aplicación muestra una lista detallada de películas, con sus títulos, imágenes y descripciones. Utilicé Tailwind y Flowbite para diseñar una interfaz de usuario moderna y visualmente atractiva. Los datos se obtuvieron dinámicamente desde la API de TMDB, garantizando información actualizada y precisa.",
     link: "https://movie-mania-navy.vercel.app/",
     github: "https://github.com/mag0/MovieMania",
     image: "/img/moviemania.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.FLOWBITE],
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.FLOWBITE, TAGS.JAVASCRIPT],
   },
   {
     title: "Preguntados",
@@ -131,17 +173,41 @@ const PROJECTS = [
       "Desarrollé una aplicación web de gestión de tareas utilizando Angular para el frontend y una API RESTful creada con Node.jsy Express en el backend. La aplicación permite a los usuarios crear, leer, actualizar y eliminar tareas, las cuales se almacenan en memoria en el backend. Los usuarios pueden gestionar sus listas de tareas de manera intuitiva y eficiente a través de una interfaz web interactiva.",
     github: "https://github.com/mag0/TPTallerWeb2",
     image: "/img/webTareas.jpg",
-    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.EXPRESS, TAGS.FLOWBITE],
+    tags: [
+      TAGS.ANGULAR,
+      TAGS.NODEJS,
+      TAGS.EXPRESS,
+      TAGS.FLOWBITE,
+      TAGS.TYPESCRIPT,
+    ],
   },
   {
     title: "Lista de Personajes de DragonBall",
     modalidad: "Individual",
     description:
-      "Desarrollé una aplicación de personajes utilizando Astro para el frontend y la API de DragonBall para obtener la información de los personajes. La aplicación muestra una lista detallada de personajes, con sus nombres, imágenes y descripciones. Obtuve los datos dinámicamente desde la API de Pokémon, garantizando información actualizada y precisa. Esta aplicación proporciona una experiencia de usuario fluida y atractiva, combinando tecnologías modernas para lograr una interfaz intuitiva y visualmente agradable.",
+      "Desarrollé una aplicación de personajes utilizando Astro para el frontend y la API de DragonBall para obtener la información de los personajes. La aplicación muestra una lista detallada de personajes, con sus nombres, imágenes y descripciones. Obtuve los datos dinámicamente desde la API de Pokémon, garantizando información actualizada y precisa.",
     link: "https://dragonball-api-web.vercel.app/",
     github: "https://github.com/mag0/PokemonWeb",
     image: "/img/pokemonWeb.png",
-    tags: [TAGS.ASTRODEV, TAGS.FLOWBITE],
+    tags: [TAGS.ASTRODEV, TAGS.FLOWBITE, TAGS.TAILWIND],
+  },
+  {
+    title: "Consesionarios de Estados Unidos",
+    modalidad: "Individual",
+    description:
+      "Desarrollé una aplicación web utilizando JavaScript y React.js para el frontend, y Python, Node.js y Express para el backend. La aplicación muestra una lista detallada de elementos, con sus nombres, imágenes y descripciones. Obtuve los datos dinámicamente desde una API personalizada, garantizando información actualizada y precisa. Utilicé principios de DevOps para la integración y entrega continua, asegurando un desarrollo eficiente y sin interrupciones. Finalmente, desplegué la aplicación en la nube utilizando contenedores y tecnologías sin servidor, lo que permite una escalabilidad y accesibilidad óptimas.",
+    github: "https://github.com/mag0/Dealer_project",
+    image: "/img/concesionarios.png",
+    tags: [TAGS.DJANGO, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.DOCKER, TAGS.EXPRESS],
+  },
+  {
+    title: "Api de recetas",
+    modalidad: "Individual",
+    description:
+      "Desarrollé una API de recetas utilizando .NET y C#, con MongoDB como base de datos. Esta API permite a los usuarios consultar, agregar, actualizar y eliminar recetas. Cada receta contiene detalles como el nombre del plato, los ingredientes necesarios, las instrucciones de preparación y una imagen del resultado final. Utilicé MongoDB para la gestión de la base de datos, aprovechando su flexibilidad y escalabilidad para almacenar y consultar los datos.",
+    github: "https://github.com/mag0/RecetasApi",
+    image: "/img/apiRecetas.png",
+    tags: [TAGS.CSHARP, TAGS.MONGODB],
   },
 ];
 ---
