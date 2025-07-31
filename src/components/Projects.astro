@@ -127,17 +127,40 @@ const TAGS = {
     icon: Angular,
   },
 };
-const PROJECTS = [
+const FEATURED_PROJECTS = [
+  {
+    title: "Aplicacion Web y Movil - WIRIN",
+    modalidad: "Grupal",
+    description:
+      "Aplicación pensada para estudiantes con discapacidad visual, que ofrece un servicio para gestionar la digitalización de textos académicos. Realizada por un equipo de 7 desarrolladores de software utilizando Git y SCRUM como metodología ágil, y .Net y Angular para el Backend/Frontend. Mi participación fue como desarrollador fullstack, encargado de construir vistas en el frontend junto a sus servicios y tests, además de desarrollar funcionalidades en el backend que daban soporte a esas interfaces.",
+    landingPage: "https://wirinadapta.com.ar/",
+    frontend: "https://github.com/lucasdbarrios/WIRIN-FrontEnd",
+    backend: "https://github.com/thomasloader1/wirin-api",
+    image: "/img/wirin.png",
+    tags: [TAGS.ANGULAR, TAGS.CSHARP, TAGS.TYPESCRIPT],
+  },
   {
     title: "Pagina web - Pasteleria",
     modalidad: "Individual",
     description:
       "Desarrollé una página web personalizada para una pastelería utilizando React y Flowbite. La plataforma incluye un catálogo de productos atractivo y funcional, donde los usuarios pueden explorar una amplia variedad de productos de pastelería con imágenes de alta calidad y descripciones detalladas. Además, la página está optimizada para ser completamente responsive.",
-    link: "https://beluguerreiropasteleria.vercel.app/",
-    github: "https://github.com/mag0/Belicias2.0",
+    link: "https://pasteleria-belen.vercel.app/",
+    github: "https://github.com/mag0/PasteleriaBelen",
     image: "/img/belicias.png",
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.FLOWBITE, TAGS.JAVASCRIPT],
   },
+  {
+    title: "Gestion de flota vehicular",
+    modalidad: "Grupal",
+    description:
+      "Desarrollé una aplicación web de gestión de flotas utilizando Spring y SQL Server. Cada usuario puede gestionar su propia flota de vehículos, tomar pedidos y asignarlos a los vehículos a través de la web. La aplicación también incluye un mapa en tiempo real que muestra los viajes de los vehículos.",
+    github: "https://github.com/mag0/ProyectoTallerWeb",
+    image: "/img/gestionVehicular.jpg",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.SQLSERVER, TAGS.BOOTSTRAP],
+  },
+];
+
+const OTHER_PROJECTS = [
   {
     title: "WeatherWeb",
     modalidad: "Individual",
@@ -168,19 +191,10 @@ const PROJECTS = [
     tags: [TAGS.PHP, TAGS.SQLSERVER, TAGS.BOOTSTRAP],
   },
   {
-    title: "Gestion de flota vehicular",
-    modalidad: "Grupal",
-    description:
-      "Desarrollé una aplicación web de gestión de flotas utilizando Spring y SQL Server. Cada usuario puede gestionar su propia flota de vehículos, tomar pedidos y asignarlos a los vehículos a través de la web. La aplicación también incluye un mapa en tiempo real que muestra los viajes de los vehículos.",
-    github: "https://github.com/mag0/ProyectoTallerWeb",
-    image: "/img/gestionVehicular.jpg",
-    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.SQLSERVER, TAGS.BOOTSTRAP],
-  },
-  {
     title: "Aplicacion de lista de tareas",
     modalidad: "Grupal",
     description:
-      "Desarrollé una aplicación web de gestión de tareas utilizando Angular para el frontend y una API RESTful creada con Node.jsy Express en el backend. La aplicación permite a los usuarios crear, leer, actualizar y eliminar tareas, las cuales se almacenan en memoria en el backend. Los usuarios pueden gestionar sus listas de tareas de manera intuitiva y eficiente a través de una interfaz web interactiva.",
+      "Desarrollé una aplicación web de gestión de tareas utilizando Angular para el frontend y una API RESTful creada con Node.js y Express en el backend. La aplicación permite a los usuarios crear, leer, actualizar y eliminar tareas, las cuales se almacenan en memoria en el backend. Los usuarios pueden gestionar sus listas de tareas de manera intuitiva y eficiente a través de una interfaz web interactiva.",
     github: "https://github.com/mag0/TPTallerWeb2",
     image: "/img/webTareas.jpg",
     tags: [
@@ -191,16 +205,6 @@ const PROJECTS = [
       TAGS.TYPESCRIPT,
     ],
   },
-  // {
-  //   title: "Lista de Personajes de DragonBall",
-  //   modalidad: "Individual",
-  //   description:
-  //     "Desarrollé una aplicación de personajes utilizando Astro para el frontend y la API de DragonBall para obtener la información de los personajes. La aplicación muestra una lista detallada de personajes, con sus nombres, imágenes y descripciones. Obtuve los datos dinámicamente desde la API de Pokémon, garantizando información actualizada y precisa.",
-  //   link: "https://dragonball-api-web.vercel.app/",
-  //   github: "https://github.com/mag0/PokemonWeb",
-  //   image: "/img/pokemonWeb.png",
-  //   tags: [TAGS.ASTRODEV, TAGS.FLOWBITE, TAGS.TAILWIND],
-  // },
   {
     title: "Consesionarios de Estados Unidos",
     modalidad: "Individual",
@@ -213,62 +217,152 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(
-      ({ image, title, modalidad, description, tags, link, github }) => (
-        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-          <div class="w-full md:w-1/2">
-            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800">
-              <img
-                alt="Recién llegado vs 5 años en Nueva Zelanda"
-                class="object-cover object-center w-full h-full"
-                loading="lazy"
-                src={image}
-              />
-            </div>
-          </div>
-
-          <div class="w-full md:w-1/2 md:max-w-lg">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-              {title}
-            </h3>
-            <h4 style="color: rgb(246, 113, 113);">Desarrollo {modalidad}</h4>
-            <div class="flex flex-wrap mt-2">
-              <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
-                {tags.map((tag) => (
-                  <li>
-                    <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                    >
-                      <tag.icon class="size-4" />
-                      {tag.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div class="mt-2 text-gray-700 dark:text-gray-400">
-                {description}
+<section class="mb-16">
+  <h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100">
+    Proyectos Destacados
+  </h2>
+  <div class="flex flex-col gap-y-16">
+    {
+      FEATURED_PROJECTS.map(
+        ({
+          image,
+          title,
+          modalidad,
+          description,
+          tags,
+          link,
+          landingPage,
+          github,
+          frontend,
+          backend,
+        }) => (
+          <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+              <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800">
+                <img
+                  alt={title}
+                  class="object-cover object-center w-full h-full"
+                  loading="lazy"
+                  src={image}
+                />
               </div>
-              <footer class="flex items-end justify-start mt-4 gap-x-4">
-                {github && (
-                  <LinkButton href={github}>
-                    <GitHub class="size-6" />
-                    Codigo
-                  </LinkButton>
-                )}
-                {link && (
-                  <LinkButton href={link}>
-                    <Link class="size-4" />
-                    Web
-                  </LinkButton>
-                )}
-              </footer>
             </div>
-          </div>
-        </article>
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                {title}
+              </h3>
+              <h4 style="color: rgb(246, 113, 113);">Desarrollo {modalidad}</h4>
+              <div class="flex flex-wrap mt-2">
+                <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
+                  {tags.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="mt-2 text-gray-700 dark:text-gray-400">
+                  {description}
+                </div>
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  {frontend && (
+                    <LinkButton href={frontend}>
+                      <GitHub class="size-6" />
+                      Frontend
+                    </LinkButton>
+                  )}
+                  {backend && (
+                    <LinkButton href={backend}>
+                      <GitHub class="size-6" />
+                      Backend
+                    </LinkButton>
+                  )}
+                  {github && (
+                    <LinkButton href={github}>
+                      <GitHub class="size-6" />
+                      Github
+                    </LinkButton>
+                  )}
+                  {landingPage && (
+                    <LinkButton href={landingPage}>
+                      <Link class="size-4" />
+                      Landing
+                    </LinkButton>
+                  )}
+                </footer>
+              </div>
+            </div>
+          </article>
+        )
       )
-    )
-  }
-</div>
+    }
+  </div>
+</section>
+
+<!-- Sección de todos los demás proyectos -->
+<section>
+  <h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100">
+    Otros proyectos
+  </h2>
+  <div class="flex flex-col gap-y-16">
+    {
+      OTHER_PROJECTS.map(
+        ({ image, title, modalidad, description, tags, link, github }) => (
+          <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+              <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800">
+                <img
+                  alt={title}
+                  class="object-cover object-center w-full h-full"
+                  loading="lazy"
+                  src={image}
+                />
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                {title}
+              </h3>
+              <h4 style="color: rgb(246, 113, 113);">Desarrollo {modalidad}</h4>
+              <div class="flex flex-wrap mt-2">
+                <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
+                  {tags.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="mt-2 text-gray-700 dark:text-gray-400">
+                  {description}
+                </div>
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  {github && (
+                    <LinkButton href={github}>
+                      <GitHub class="size-6" />
+                      Github
+                    </LinkButton>
+                  )}
+                  {link && (
+                    <LinkButton href={link}>
+                      <Link class="size-4" />
+                      Web
+                    </LinkButton>
+                  )}
+                </footer>
+              </div>
+            </div>
+          </article>
+        )
+      )
+    }
+  </div>
+</section>
