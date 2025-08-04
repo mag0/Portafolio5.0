@@ -143,11 +143,11 @@ const FEATURED_PROJECTS = [
     title: "Pagina web - Pasteleria",
     modalidad: "Individual",
     description:
-      "Desarrollé una página web personalizada para una pastelería utilizando React y Flowbite. La plataforma incluye un catálogo de productos atractivo y funcional, donde los usuarios pueden explorar una amplia variedad de productos de pastelería con imágenes de alta calidad y descripciones detalladas. Además, la página está optimizada para ser completamente responsive.",
+      "Desarrollé una página web personalizada para una pastelería utilizando React y Tailwind. La plataforma incluye un catálogo de productos atractivo y funcional, donde los usuarios pueden explorar una amplia variedad de productos de pastelería con imágenes de alta calidad y descripciones detalladas. Además, la página está optimizada para ser completamente responsive.",
     link: "https://pasteleria-belen.vercel.app/",
     github: "https://github.com/mag0/PasteleriaBelen",
     image: "/img/belicias.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.FLOWBITE, TAGS.JAVASCRIPT],
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT],
   },
   {
     title: "Gestion de flota vehicular",
@@ -285,6 +285,12 @@ const OTHER_PROJECTS = [
                     <LinkButton href={github}>
                       <GitHub class="size-6" />
                       Github
+                    </LinkButton>
+                  )}
+                  {link && (
+                    <LinkButton href={link}>
+                      <Link class="size-4" />
+                      Web
                     </LinkButton>
                   )}
                   {landingPage && (
