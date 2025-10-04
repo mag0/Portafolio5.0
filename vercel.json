@@ -1,23 +1,11 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/node"
-        }
-    ],
     "functions": {
         "api/**/*.js": {
-            "runtime": "nodejs22.x"
+            "runtime": "nodejs20.x"
         },
         "api/**/*.ts": {
-            "runtime": "nodejs22.x"
+            "runtime": "nodejs20.x"
         }
-    },
-    "routes": [
-        {
-            "src": "/api/(.*)",
-            "dest": "/api/$1.js"
-        }
-    ]
+    }
 }
