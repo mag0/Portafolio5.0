@@ -8,5 +8,8 @@ export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: "http://localhost:4321/",
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({
+    runtime: "nodejs22.x",
+  }),
 });
+
